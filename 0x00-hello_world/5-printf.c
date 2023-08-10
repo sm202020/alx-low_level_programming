@@ -1,9 +1,9 @@
 #include <studio.h>
 
 /**
- * main - prints "with proper grammer, but the outcome is a piece of art," followed newline
- * Return: Always 0.
+ * main - prints "A program with printf function
  *
+ * Return: Always 0 (Success)
  */
 
 int main(void)
