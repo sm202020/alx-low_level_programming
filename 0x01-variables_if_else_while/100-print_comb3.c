@@ -1,31 +1,27 @@
-#include <stdio.h>
-
+#include <stdlib.h>
+#include <time.h>
 /**
- * main - Entry point
+ * main -starting point
  *
- * Return: Always 0 (Success)
+ * Return: returns (0) on success
  */
 int main(void)
 {
-int i;
-int j;
+int n;
 
-
-for (i = 48; i <= 56; i++)
+srand(time(0));
+n = rand() - RAND_MAX / 2;
+if (n > 0)
 {
-for (j = i + 1; j <= 57; j++)
-{
-
-putchar(i);
-putchar(j);
-if (i == 56 && j == 57)
-continue;
-putchar(',');
-putchar(' ');
-																							}
+puts("is positive");
 }
-putchar('\n');
+else if (n == 0)
+{
+puts("is zero");
+}
+else
+{
+puts("is negative");
+}
 return (0);
 }
-
-~
