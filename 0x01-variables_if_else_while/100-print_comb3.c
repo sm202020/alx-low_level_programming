@@ -1,27 +1,29 @@
-#include <stdlib.h>
-#include <time.h>
+#include <stdio.h>
 /**
- * main -starting point
+ * main - Entry point
  *
- * Return: returns (0) on success
+ * Description: Prints all possible different combinations of two digits
+ * separated by ,, followed by a space.
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-int n;
-
-srand(time(0));
-n = rand() - RAND_MAX / 2;
-if (n > 0)
+int first_digit;
+int second_digit;
+for (first_digit = 0; first_digit <= 8; first_digit++)
 {
-puts("is positive");
-}
-else if (n == 0)
+for (second_digit = first_digit + 1; second_digit <= 9; second_digit++)
 {
-puts("is zero");
-}
-else
+putchar(first_digit + '0');
+putchar(second_digit + '0');
+if (first_digit != 8 || second_digit != 9)
 {
-puts("is negative");
+putchar(',');
+putchar(' ')
 }
+}
+}
+putchar('\n');
 return (0);
 }
